@@ -6,17 +6,27 @@ export const CodeContent = () => {
   const { displayedText, isComplete } = useTypewriter(CODE_CONTENT, 10, 300);
 
   const formatCode = (code: string) => {
-    return code.split('\n').map((line) => {
-      line = line
-        .replace(/(const|let|var|function|return|while|true)/g, '<span class="keyword">$1</span>')
-        .replace(/('.*?')/g, '<span class="string">$1</span>')
-        .replace(/(\w+)(?=\s*:)/g, '<span class="function">$1</span>');
-      return `<span class="block leading-6">${line}</span>`;
-    }).join('');
+    return code
+      .split('\n')
+      .map((line) => {
+        line = line
+          .replace(
+            /(const|let|var|function|return|while|true)/g,
+            '<span class="keyword">$1</span>'
+          )
+          .replace(/('.*?')/g, '<span class="string">$1</span>')
+          .replace(/(\w+)(?=\s*:)/g, '<span class="function">$1</span>');
+        return `<span class="block leading-6">${line}</span>`;
+      })
+      .join('');
   };
 
   return (
-    <pre className="p-4 text-sm font-mono">
+    <pre
+      className="p-4 text-sm font-mono overflow-x-auto md:overflow-x-visible"
+      // Added responsive classes for padding and font size. Overflow handling for smaller screens.
+      style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
+    >
       <code dangerouslySetInnerHTML={{ __html: formatCode(displayedText) }} />
       {!isComplete && (
         <motion.span

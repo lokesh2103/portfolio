@@ -52,7 +52,7 @@ export const PreLanding = ({ onComplete }: PreLandingProps) => {
                 style={{ zIndex: 55 }}
               >
                 <SlidingText
-                  text="Hello,"
+                  text="Hello!"
                   className="text-6xl md:text-7xl font-bold"
                   baseDelay={0.1}
                 />
@@ -70,7 +70,7 @@ export const PreLanding = ({ onComplete }: PreLandingProps) => {
                 style={{ zIndex: 55 }}
               >
                 <SlidingText
-                  text="Welcome to my Portfolio"
+                  text="Let's Dive Into My Portfolio."
                   className="text-5xl md:text-6xl font-bold"
                   baseDelay={0.1}
                 />

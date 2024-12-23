@@ -15,18 +15,17 @@ export const HeroContent = () => (
       transition={{ delay: 0.2, duration: 0.5 }}
       className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
     >
-      <span className="hero-title">
-        Hi, I'm Lokesh
-      </span>
+      <span className="hero-title">Hi, I'm Lokesh</span>
     </motion.h1>
     <TypedTitle />
     <motion.p
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.5 }}
-      className="text-lg text-foreground/80 mb-8 max-w-xl"
+      className="text-sm sm:text-md md:text-lg text-foreground/80 mb-8 max-w-xl"
     >
-      Building modern web applications with a focus on performance, accessibility, and user experience.
+      Building modern web applications with a focus on performance,
+      accessibility, and user experience.
     </motion.p>
     <ActionButtons />
   </motion.div>

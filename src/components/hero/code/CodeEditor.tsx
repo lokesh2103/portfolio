@@ -7,7 +7,7 @@ import { CodeFooter } from './CodeFooter';
 
 export const CodeEditor = () => {
   const { isComplete } = useTypewriter(CODE_CONTENT, 10, 300);
-  
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
