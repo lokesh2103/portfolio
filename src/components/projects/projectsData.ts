@@ -53,8 +53,8 @@ export const projects: ProjectType[] = [
       'A modern portfolio website with smooth animations, and responsive design. Features include dynamic content loading, contact form integration, and optimized performance.',
     image: DevPortfolio,
     tech: ['React.js', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'Vite'],
-    demo: 'https://portfolio.demo',
-    github: 'https://github.com/demo/portfolio',
+    demo: 'https://portfolio-lokesh-sahukar.web.app/',
+    github: 'https://github.com/lokesh2103/portfolio',
     featured: true,
     features: [
       'Modern and responsive design',
