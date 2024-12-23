@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  html {
+    @apply overflow-x-hidden scroll-smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .hero-title {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-primary to-green-400 bg-[length:200%_auto] animate-text-gradient;
+  }
+
+  .hero-gradient {
+    @apply from-primary/20 via-primary/10 to-transparent;
+  }
+
+  .text-gradient {
+    @apply from-primary via-primary to-primary/80;
+  }
+}
+
+/* Code editor styles */
+.code-editor {
+  @apply bg-[#1a1b26] backdrop-blur-xl;
+  box-shadow: 
+    0 0 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 20px -5px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.code-editor pre {
+  @apply text-gray-100;
+}
+
+.code-editor .comment {
+  @apply text-gray-400;
+}
+
+.code-editor .string {
+  @apply text-green-400;
+}
+
+.code-editor .keyword {
+  @apply text-purple-400;
+}
+
+.code-editor .function {
+  @apply text-blue-400;
+}
+
+/* Prevent overflow from animated elements */
+.overflow-guard {
+  @apply relative overflow-hidden;
+}
